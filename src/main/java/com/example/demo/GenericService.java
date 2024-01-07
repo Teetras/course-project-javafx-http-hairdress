@@ -76,7 +76,7 @@ public interface GenericService {
                     .post(requestBody)
                     .build();
            return super.handleResponse(request,responseType);
-        }
+        };
 
         @Override
         public <T> T requestGet(String url, Map<String, String> queryParameters, TypeReference<T> responseType) throws Exception {
