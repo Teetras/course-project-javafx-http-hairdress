@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.control.ProgressIndicator?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="786.0" prefWidth="1101.0" style="-fx-background-color: A4B1B0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.StartMenuForUserController">
+    <children>
+        <AnchorPane layoutY="84.0" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: EFEBCE;">
+            <children>
+                <ProgressIndicator fx:id="progressIndicator" layoutX="520.0" layoutY="80.0" visible="false" />
+
+                <Button  layoutX="993.0" layoutY="14.0" mnemonicParsing="false" onAction="#openPerson" text="Профиль" />
+
+                <Button fx:id="sortByPriceButton" layoutX="37.0" layoutY="14.0" mnemonicParsing="false" onAction="#sortByPrice" text="Сортировка по цене" />
+
+                <Button fx:id="sortByAlphabetButton" layoutX="184.0" layoutY="14.0" mnemonicParsing="false" onAction="#sortByAlphabet" text="Сортировка по алфавиту" />
+
+<!--                <Slider fx:id="priceSlider" layoutX="331.0" layoutY="14.0" max="100" min="0" showTickLabels="true" showTickMarks="true" value="100" />-->
+
+<!--                <Button fx:id="filterByPriceButton" layoutX="554.0" layoutY="14.0" mnemonicParsing="false" onAction="#filterByPrice" text="Фильтрация по цене" />-->
+            </children></AnchorPane>
+        <TableView fx:id="tableView" layoutX="37.0" layoutY="330.0" onMouseClicked="#onTableItemClick" prefHeight="320.0" prefWidth="1026.0">
+            <columns>
+                <TableColumn prefWidth="200.0" text="Наименование услуги" />
+                <TableColumn prefWidth="200.0" text="Описание" />
+                <TableColumn prefWidth="160.0" text="Тип услуги" />
+                <TableColumn prefWidth="250.0" text="Продолжительность выполнения" />
+                <TableColumn prefWidth="215.0" text="Стоимость в $" />
+            </columns>
+        </TableView>
+        <Label layoutX="847.0" layoutY="24.0" prefHeight="59.0" prefWidth="248.0" text="Hair Salon">
+            <font>
+                <Font name="Exotc350 DmBd BT Demi-Bold" size="49.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

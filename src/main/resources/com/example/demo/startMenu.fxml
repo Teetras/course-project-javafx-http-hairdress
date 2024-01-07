@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1100.0" style="-fx-background-color: A4B1B0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.HomeController">
+    <children>
+        <AnchorPane layoutY="84.0" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: EFEBCE;">
+         <children>
+            <ButtonBar layoutX="76.0" prefHeight="109.0" prefWidth="931.0">
+              <buttons>
+                  <Button fx:id="controllerWorker" mnemonicParsing="false" onMouseClicked="#handleCreateIncomeReport" prefHeight="58.0" text="Создание отчета о доходах" />
+                  <Button fx:id="controllerRecords" mnemonicParsing="false" onMouseClicked="#handleCalculateSalary" prefHeight="59.0" text="Расчет зп" />
+                  <Button fx:id="registerServices" mnemonicParsing="false" prefHeight="59.0" text="Регистрация услуги " />
+                  <Button fx:id="popularCategory" layoutX="37.0" layoutY="285.0" mnemonicParsing="false" onAction="#popularCategoryDiagram" prefHeight="58.0" prefWidth="221.0" text="Диаграмма популярности категорий" />
+              </buttons>
+            </ButtonBar>
+         </children>
+        </AnchorPane>
+        <AnchorPane layoutX="357.0" layoutY="167.0" prefHeight="343.0" prefWidth="387.0">
+            <children>
+                <Button fx:id="registerWorker" layoutX="58.0" layoutY="240.0" mnemonicParsing="false" onMouseClicked="#registerWorker" prefHeight="30.0" prefWidth="270.0" text="Добавить сотрудника">
+                    <font>
+                        <Font name="Century" size="16.0" />
+                    </font>
+                </Button>
+                <PasswordField fx:id="password_field" layoutX="26.0" layoutY="167.0" prefHeight="30.0" prefWidth="333.0" promptText="Пароль" />
+                <TextField fx:id="login_field" layoutX="26.0" layoutY="120.0" prefHeight="30.0" prefWidth="333.0" promptText="Логин" />
+                <TextField fx:id="phone_field" layoutX="26.0" layoutY="76.0" prefHeight="30.0" prefWidth="333.0" promptText="Номер телефона" />
+                <TextField fx:id="fio_field" layoutX="26.0" layoutY="33.0" prefHeight="30.0" prefWidth="333.0" promptText="ФИО" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="847.0" layoutY="24.0" prefHeight="59.0" prefWidth="248.0" text="Hair Salon">
+            <font>
+                <Font name="Exotc350 DmBd BT Demi-Bold" size="49.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>

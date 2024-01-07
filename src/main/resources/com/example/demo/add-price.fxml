@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1100.0" style="-fx-background-color: A4B1B0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.controllers.addPriceController">
+    <children>
+        <AnchorPane layoutY="74.0" prefHeight="702.0" prefWidth="1100.0" style="-fx-background-color: EFEBCE;">
+            <children>
+                <Label fx:id="priceLabel" layoutX="295.0" layoutY="250.0" prefHeight="25.0" prefWidth="80.0" />
+                <TableView fx:id="tableView" layoutX="37.0" layoutY="330.0" prefHeight="320.0" prefWidth="1026.0">
+                    <columns>
+                        <TableColumn prefWidth="200.0" text="Наименование услуги" />
+                        <TableColumn prefWidth="300.0" text="Описание" />
+                        <TableColumn prefWidth="160.0" text="Тип услуги" />
+                        <TableColumn prefWidth="200.0" text="Продолжительность(ч.)" />
+                        <TableColumn prefWidth="170.0" text="Стоимость в $" />
+                    </columns>
+                </TableView>
+                <Pane layoutX="25.0" layoutY="22.0" prefHeight="279.0" prefWidth="329.0">
+                    <children>
+                        <TextField fx:id="serviceNameTextField" layoutX="8.0" layoutY="2.0" prefHeight="25.0" prefWidth="248.0" promptText="Наименование услуги" />
+                        <TextField fx:id="descriptionTextField" layoutX="8.0" layoutY="38.0" prefHeight="25.0" prefWidth="248.0" promptText="Описание" />
+                        <TextField fx:id="durationTextField" layoutX="8.0" layoutY="75.0" prefHeight="25.0" prefWidth="248.0" promptText="Продолжительность выполнения" />
+                        <ComboBox fx:id="categoryComboBox" layoutX="8.0" layoutY="149.0" prefWidth="248.0" promptText="Выберите категорию" />
+                        <Slider fx:id="priceSlider" layoutX="8.0" layoutY="112.0" max="1000" min="0" prefHeight="25.0" prefWidth="248.0" />
+                        <Button fx:id="addButton" layoutX="14.0" layoutY="240.0" mnemonicParsing="false" onAction="#addHairdressingServices" text="Добавить" />
+                    </children>
+                </Pane>
+            <TextField fx:id="categoryName" layoutX="531.0" layoutY="22.0" prefHeight="25.0" prefWidth="205.0" promptText="Новая категория" />
+            <Button fx:id="addCategory" layoutX="768.0" layoutY="22.0" mnemonicParsing="false" onAction="#addCategory" text="Добавить" />
+            <Button fx:id="deleteButton" layoutX="993.0" layoutY="663.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="70.0" text="Удалить" />
+            <Button fx:id="editButton" layoutX="868.0" layoutY="663.0" mnemonicParsing="false" onAction="#editHairdressing" text="Изменить" />
+            <Button fx:id="updateTable" layoutX="945.0" layoutY="275.0" mnemonicParsing="false" onAction="#updateTable" text="Обновить таблицу" />
+            </children>
+        </AnchorPane>
+        <Label layoutX="852.0" layoutY="14.0" prefHeight="59.0" prefWidth="248.0" text="Hair Salon">
+            <font>
+                <Font name="Exotc350 DmBd BT Demi-Bold" size="49.0" />
+            </font>
+        </Label>
+        <Button fx:id="backButton" layoutX="21.0" layoutY="19.0" mnemonicParsing="false" onAction="#goBack" text="Назад" />
+    </children>
+</AnchorPane>
